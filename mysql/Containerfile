@@ -1,0 +1,6 @@
+FROM mariadb
+
+ENV MYSQL_ROOT_PASSWORD="superuser_password"
+ENV MYSQL_USER="user"
+ENV MYSQL_PASSWORD="user_password"
+ENV MYSQL_DATABASE="testing_db"
