@@ -30,7 +30,7 @@ podman pod create --name php_mysql_backend -p 7000:80
 ```
 Добавим в него php + apache + директорию с проектом
 ```sh
-podman run --pod php_mysql_backend -d -it -v /home/max/Red/project/Webcadev/webca_php/webca/:/var/www/html/ --name apache_php apache_php:latest
+podman run --pod php_mysql_backend -d -it -v $PWD/site/:/var/www/html/ --name apache_php apache_php:latest
 ```
 Добавим mysql/mariadb
 ```sh
