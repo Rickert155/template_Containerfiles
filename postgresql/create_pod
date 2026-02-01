@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+COMMAND_CREATE=$(podman pod create --name postgresql -p 5432:5432)
+echo $COMMAND_CREATE
+
+COMMAND_RUN=$(podman pod start postgresql)
+echo $COMMAND_RUN
+
