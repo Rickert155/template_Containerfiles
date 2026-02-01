@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+CONTAINER_NAME="test_connect_postgres"
+COMMAND_RUN="podman run --pod postgresql --rm -it --name $CONTAINER_NAME ubuntu"
+$COMMAND_RUN
