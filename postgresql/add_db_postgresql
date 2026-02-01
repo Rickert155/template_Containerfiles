@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+POD_NAME="postgresql"
+
+LOCAL_IMAGE_NAME="localhost/postgresql"
+
+CONTAINER_NAME="postgresql-test"
+
+COMMAND_RUN=$(\
+	podman run -d --pod $POD_NAME \
+	--name $CONTAINER_NAME $LOCAL_IMAGE_NAME \
+)
+
+echo "POD: $POD_NAME"
+echo "Local image: $LOCAL_IMAGE_NAME"
+echo "Container: $CONTAINER_NAME"
