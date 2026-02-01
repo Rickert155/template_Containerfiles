@@ -1,7 +1,13 @@
 #!/usr/bin/bash
-COMMAND_CREATE=$(podman pod create --name postgresql -p 5432:5432)
+POSTGRES_PORT="5432:5432"
+POD_NAME="postgresql"
+COMMAND_CREATE=$(podman pod create --name $POD_NAME \
+	-p $POSTGRES_PORT >/dev/null)
 echo $COMMAND_CREATE
+echo "pod: $POD_NAME" 
+echo "port: $POSTGRES_PORT"
 
-COMMAND_RUN=$(podman pod start postgresql)
+COMMAND_RUN=$(podman pod start postgresql >/dev/null)
 echo $COMMAND_RUN
+echo "pod start: $POD_NAME"
 
